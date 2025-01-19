@@ -1,0 +1,237 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+:root {
+    --cor1: #011C40;
+    --cor2: #011126;
+    --cor3: #032859;
+    --cor4: #074973;
+    --cor5: #08678C;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", serif;
+}
+/*Cabeçalho e menu*/
+header {
+    background-image: linear-gradient(to right, var(--cor3), var(--cor4));
+    height: 88px;
+}
+
+nav > ul.menu {
+    list-style: none;
+    text-align: center;
+}
+.menu > li {
+    display: inline-block;
+    padding: 40px 0px;
+}
+
+.menu > li > a {
+    color: white;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 16px;
+}
+
+.menu > li > a:hover {
+    background-color: var(--cor5);
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.5s, font-weight 0.3s;
+}
+
+::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+}
+
+/*Estilização Sobre mim*/
+#sobre {
+    margin: auto;
+    max-width: 1380px;
+    padding: 30px;
+}
+div.imagem-perfil {
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    background-color: gray;
+    background-image: url(../imagens/perfil-imagem.png);
+    margin: auto;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.199);
+}
+
+#sobre > h1 {
+    font-weight: bolder;
+    font-size: 2.3em;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+}
+
+#sobre > p {
+    text-align: justify;
+    text-indent: 25px;
+    line-height: 1.5em;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/*Estilização Portifólio*/
+#portifolio {
+    margin: auto;
+    max-width: 1380px;
+    padding: 30px;
+}
+
+
+#portifolio > h1 {
+    font-weight: bolder;
+    font-size: 2.3em;
+    text-transform: uppercase;
+}
+
+#portifolio > p {
+    padding-bottom: 30px;
+}
+
+/*Configurações para imagens*/
+.container {
+    display: block; /*Alinahamento de imagens horizontalmente com inline-block e block*/
+    text-align: center;
+    padding: 20px 0px;
+}
+
+div.gif {
+    display: inline-block;
+    width: 100%;
+    max-width: 500px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    vertical-align: top;
+    border: 1px solid rgba(0, 0, 0, 0.214);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+div.gif > a > img {
+    width: 100%;
+}
+/*Configurações para botão*/
+.botao {
+    margin: 30px 0px;
+}
+
+.botao > a {
+    background-color: var(--cor5);
+    font-weight: bold;
+    font-size: 1.2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    width: 150px;
+    margin: auto;
+    padding: 10px 20px;
+    border: 1px solid rgba(0, 0, 0, 0.222);
+    border-radius: 6px;
+    transition: 0.6s;
+}
+
+.botao > a:hover {
+    background-color: var(--cor1);
+    color: white;
+}
+
+/*Estilização Formações*/
+#formacoes {
+    background-image: linear-gradient(to right, var(--cor2), var(--cor1));
+    color: white;
+    max-height: 1200px;
+    border-radius: 4px;
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+
+#formacoes > h1 {
+    font-weight: bolder;
+    font-size: 2.3em;
+    text-transform: uppercase;
+    padding: 30px 0px 30px 25px;
+    color: rgba(255, 255, 255, 0.622);
+}
+
+/*Para criar os cards usei flexbox, porém ainda não sei como usar, pois ainda não estudei sobre esse assunto*/
+.card-container {
+    display: flex; /*Usando Flexbox*/
+    gap: 20px; /*Espaçamento entre os cards*/
+    flex-wrap: wrap; /*Permite quebra de linha quando necessário*/
+    justify-content: center; /*Centraliza os cards*/
+    padding-bottom: 40px;
+}
+
+.card {
+    background-color: var(--cor5);
+    border: 1px solid white;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.332);
+    width: 300px;
+    height: 150px;
+    padding: 30px 0px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 4px var(--cor4);
+}
+
+.card > h2 {
+    padding: 15px 0px;
+}
+
+.card > p {
+    color: gray;
+}
+
+/*Estilização Contato
+Fazer essa parte depois que eu tiver estudo formulários*/
+
+/*Estilização rodapé*/
+footer {
+    background-image: linear-gradient(to right, var(--cor3), var(--cor4));
+    color: white;
+}
+
+footer > p {
+    font-size: 12px;
+    text-align: center;
+    padding: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-bottom: 1px solid lightgray;
+}
+
+footer > ul {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    list-style: none;
+    padding-bottom: 16px;
+    transition: translate 0.2s ease;
+}
+
+footer ul > li > a > img {
+    height: 30px;
+    margin-top: 8px;
+}
+
+footer ul > li:hover {
+    transform: translateY(-5px);
+}
